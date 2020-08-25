@@ -3,7 +3,7 @@
   "configurations": [
       {
           "name": "PyPy3: Current File",
-          "type": "pypy3",
+          "type": "python",
           "request": "launch",
           "program": "${file}",
           "console": "integratedTerminal",

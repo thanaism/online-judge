@@ -165,3 +165,92 @@ $|V|\times|V|$の 2 次元配列
 ## FIFO: First In First Out
 
 これがスタック
+
+## Python 自体の言語仕様
+
+### set
+
+集合演算には非常に強力である。
+
+```Python
+# {}で囲うことでsetとなる
+a = {1,2,3,4}
+
+# リストをset化する場合
+a = set([1,2,3,4])
+
+# タプルをset化する場合
+a = set((1,2,3,4))
+```
+
+和、積、差、対称差を取ることが可能。
+
+#### union
+
+```python
+>>> a | b
+>>> a.union(b)  # aを維持
+>>> a.update(b)  # a自体を拡張
+```
+
+#### intersection
+
+```python
+>>> a & b
+>>> a.intersection(b)  # aを維持
+>>> a.intersection_update(b)  # a自体を拡張
+```
+
+#### difference
+
+```python
+>>> a - b
+>>> a.difference(b)  # aを維持
+>>> a.difference_update(b)  # a自体を拡張
+```
+
+#### symmetric difference
+
+```python
+>>> a ^ b
+>>> a.symmetric_difference(b)  # aを維持
+>>> a.symmetric_difference_update(b)  # a自体を拡張
+```
+
+#### subset
+
+```python
+>>> a <= b
+>>> a.issubset(b)
+```
+
+#### superset
+
+```python
+>>> a => b
+>>> a.issuperset(b)
+```
+
+#### disjoint
+
+```python
+>>> a.isdisjoint(b)
+```
+
+#### frozenset
+
+```python
+>>> a = frozenset((1,2,3,4))
+# a is immutable
+```
+
+#### methods
+
+```python
+len(a)
+a.add(b)
+a.discard(b)
+a.remove(b)  # b must be in set b
+a.pop(b)
+a.clear()
+```

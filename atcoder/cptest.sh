@@ -22,5 +22,5 @@ fi
 #     oj test -c "pypy3 ${script_name}.py" -d test/${problem_name//-/_}
 # else
 # echo ${dir_name}/test/${problem_name//-/_}
-    oj test -c "pypy3 ${file_path}" -d ${dir_name}/test/${problem_name//-/_}
+    oj test -c "python3 ${file_path}" -d ${dir_name}/test/${problem_name//-/_}
 # fi

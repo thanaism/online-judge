@@ -12,6 +12,9 @@ test_dir=${dir_name}/test/${problem_name//-/_}
 # echo ${test_dir}
 base_url=${problem_name%_*}
 
+# activate venv python
+source .venv/bin/activate
+
 # make test directory
 if [ ! -e ${test_dir} ]; then
     oj dl -d ${dir_name}/test/${problem_name//-/_} https://atcoder.jp/contests/${base_url}/tasks/${problem_name//-/_}
@@ -22,5 +25,5 @@ fi
 #     oj test -c "pypy3 ${script_name}.py" -d test/${problem_name//-/_}
 # else
 # echo ${dir_name}/test/${problem_name//-/_}
-    oj test -c "python3 ${file_path}" -d ${dir_name}/test/${problem_name//-/_}
+    oj test -c "python ${file_path}" -d ${dir_name}/test/${problem_name//-/_}
 # fi

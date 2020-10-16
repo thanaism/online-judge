@@ -1,8 +1,11 @@
 {
-  "python.pythonPath": "/usr/local/bin/python3",
+  "python.pythonPath": ".venv/bin/python",
   "python.formatting.autopep8Args": [
     "ignore = E11, E121, E225, E226, E227, E228"
   ],
   "python.linting.flake8Args": ["ignore = E11, E121, E225, E226, E227, E228"],
-  "editor.tabSize": 1
+  "python.formatting.provider": "black",
+  "python.venvPath": ".venv",
+  "editor.formatOnSave": false,
+  "python.formatting.blackArgs": ["--skip-string-normalization"]
 }

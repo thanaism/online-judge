@@ -12,6 +12,9 @@ test_dir=${dir_name}/test/${problem_name//-/_}
 # echo ${test_dir}
 base_url=${problem_name%_*}
 
+# GNU time
+export PATH="/usr/local/opt/gnu-time/libexec/gnubin:$PATH"
+
 # activate venv python
 source .venv/bin/activate
 

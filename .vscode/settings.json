@@ -7,5 +7,10 @@
   "python.formatting.provider": "black",
   "python.venvPath": ".venv",
   "editor.formatOnSave": false,
-  "python.formatting.blackArgs": ["--skip-string-normalization"]
+  "python.formatting.blackArgs": [
+    "--skip-string-normalization"
+  ],
+  "files.associations": {
+    "ostream": "cpp"
+  }
 }

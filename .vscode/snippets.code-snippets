@@ -1,0 +1,79 @@
+{
+	// Place your online-judge ワークスペース snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"input().split()":{
+		"scope":"python",
+		"prefix": "is",
+		"body": [
+			"input().split()"
+		],
+	},
+	"map(int,input().split())":{
+		"scope":"python",
+		"prefix": "mi",
+		"body": [
+			"map(int,input().split())"
+		],
+	},
+	"[*map(int,input().split())]":{
+		"scope":"python",
+		"prefix": "lim",
+		"body": [
+			"[*map(int,input().split())]"
+		],
+	},
+	"nested loop double":{
+		"scope":"python",
+		"prefix": "forfor",
+		"body": [
+			"for i in range(${1:}):",
+			"\tfor j in range(${2:}):",
+			"\t\t",
+		],
+	},
+	"nested loop triple":{
+		"scope":"python",
+		"prefix": "forforfor",
+		"body": [
+			"for i in range(${1:}):",
+			"\tfor j in range(${2:}):",
+			"\t\tfor k in range(${3:}):",
+			"\t\t\t"
+		],
+	},
+	"int(input())":{
+		"scope":"python",
+		"prefix": "ii",
+		"body": [
+			"int(input())"
+		],
+	},
+	"enumerate()":{
+		"scope":"python",
+		"prefix": "en",
+		"body": [
+			"enumerate(${1:})"
+		],
+	},
+	"input()":{
+		"scope":"python",
+		"prefix": "in",
+		"body": [
+			"input()"
+		],
+	},
+}

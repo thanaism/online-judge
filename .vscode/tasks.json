@@ -15,6 +15,19 @@
             //   "${fileBasenameNoExtension}"
             "${file}"
           ]
-      }
+      },
+      {
+        "label": "test_atcoder_sample_eps",
+        "group": {
+            "kind": "build",
+            "isDefault": false
+        },
+        "type": "shell",
+        "command": "${workspaceFolder}/cptest_eps.sh",
+        "args": [
+          //   "${fileBasenameNoExtension}"
+          "${file}"
+        ]
+    }
   ]
 }

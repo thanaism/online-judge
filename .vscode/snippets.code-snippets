@@ -76,4 +76,11 @@
 			"input()"
 		],
 	},
+	"map(int,open(0))":{
+		"scope":"python",
+		"prefix": "mio",
+		"body": [
+			"map(int,open(0))"
+		],
+	},
 }

@@ -83,4 +83,11 @@
 			"map(int,open(0))"
 		],
 	},
+	"map(int,open(0).read().split())":{
+		"scope":"python",
+		"prefix": "mios",
+		"body": [
+			"map(int,open(0).read().split())"
+		],
+	},
 }

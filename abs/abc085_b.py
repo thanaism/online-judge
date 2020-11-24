@@ -1,1 +1,0 @@
-n,*d=open(0);print(len(set(d)))

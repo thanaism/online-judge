@@ -1,1 +1,0 @@
-print(['ARC','ABC'][input()=='ARC'])

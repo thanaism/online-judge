@@ -1,27 +1,17 @@
 n,m=map(int,input().split())
-
-p=[-1]*n
-
-def root(x):
-    if p[x]<0:return x
-    p[x]=root(p[x])
-    return p[x]
-
-def union(x,y):
-    rx=root(x)
-    ry=root(y)
-    if rx==ry:return
-    if p[rx]<p[ry]:
-        rx,ry=ry,rx
-    p[rx]+=p[ry]
-    p[ry]=rx
-
-def same(x,y):
-    if root(x)==root(y):return True
-    return False
-
+r=set()
 for _ in range(m):
     x,y=map(int,input().split())
-    union(~-x,~-y)
-
-print(min(p)*-1)
+    r|={(x-1,y-1)}
+ans=0
+for i in range(1<<n):
+    b=bin(i)[2::].zfill(n)
+    ok=True
+    for j in range(n):
+        for k in range(j+1,n):
+            if b[j]==b[k]=='1':
+                if (j,k) not in r:
+                    ok=False
+                    break
+    if ok:ans=max(b.count('1'),ans)
+print(ans)

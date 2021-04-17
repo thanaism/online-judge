@@ -2,10 +2,10 @@ use proconio::input;
 
 fn main() {
     input!{
-        a:isize,
+        _:isize,
         b:isize,
         c:isize,
-        d:isize
+        _:isize
     }
     println!("{}",b-c);
 }

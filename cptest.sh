@@ -1,4 +1,3 @@
-#!/bin/zsh
 
 file_path=$1
 file_name=$(basename ${file_path})

@@ -3,31 +3,47 @@
   // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
-      {
-          "label": "test_atcoder_sample",
-          "group": {
-              "kind": "build",
-              "isDefault": true
-          },
-          "type": "shell",
-          "command": "${workspaceFolder}/cptest.sh",
-          "args": [
-            //   "${fileBasenameNoExtension}"
-            "${file}"
-          ]
+    {
+      "label": "test samples",
+      "group": {
+        "kind": "build",
+        "isDefault": true
       },
-      {
-        "label": "test_atcoder_sample_eps",
-        "group": {
-            "kind": "build",
-            "isDefault": false
-        },
-        "type": "shell",
-        "command": "${workspaceFolder}/cptest_eps.sh",
-        "args": [
-          //   "${fileBasenameNoExtension}"
-          "${file}"
-        ]
+      "type": "shell",
+      "command": "${workspaceFolder}/cptest.sh",
+      "args": [
+        //   "${fileBasenameNoExtension}"
+        "${file}"
+      ]
+    },
+    {
+      "label": "test samples eps",
+      "type": "shell",
+      "command": "${workspaceFolder}/cptest_eps.sh",
+      "args": [
+        //   "${fileBasenameNoExtension}"
+        "${file}"
+      ]
+    },
+    {
+      "label": "submit Rust or Python3",
+      "type": "shell",
+      "command": "${workspaceFolder}/cpsub.sh",
+      "args": [
+        //   "${fileBasenameNoExtension}"
+        "${file}",
+        "python3"
+      ]
+    },
+    {
+      "label": "submit PyPy3",
+      "type": "shell",
+      "command": "${workspaceFolder}/cpsub.sh",
+      "args": [
+        //   "${fileBasenameNoExtension}"
+        "${file}",
+        "pypy3"
+      ]
     }
   ]
 }

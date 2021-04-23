@@ -1,0 +1,29 @@
+
+file_path=$1
+file_name=$(basename ${file_path})
+dir_name=$(dirname ${file_path})
+extension=${file_name##*.}
+echo $extension
+problem_name=${file_name%.*}
+test_dir=${dir_name}/test/${problem_name//-/_}
+base_url=${problem_name%_*}
+
+# GNU time
+export PATH="/usr/local/opt/gnu-time/libexec/gnubin:$PATH"
+
+# activate venv python
+source .venv/bin/activate
+
+# make test directory
+full_url=https://atcoder.jp/contests/${base_url}/tasks/${problem_name//-/_}
+
+if [ $extension = "py" ]; then
+    if [ $2 = "pypy3" ]; then
+        oj submit --guess-python-version 3 --guess-python-interpreter pypy $full_url $1 -y
+    else
+        oj submit --guess-python-version 3 --guess-python-interpreter cpython $full_url $1 -y
+    fi
+else
+    oj submit $full_url $1 -y
+fi
+

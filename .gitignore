@@ -4,6 +4,7 @@
 # atcoder test cases
 */test/
 test/
+.test/
 input.txt
 
 # Byte-compiled / optimized / DLL files

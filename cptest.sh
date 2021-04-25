@@ -22,7 +22,8 @@ fi
 if [ $extension = "cpp" ]; then
     g++ ${file_path} && oj test -d ${dir_name}/test/${problem_name//-/_}
 elif [ $extension = "rs" ]; then
-    cd rust && cargo build --bin ${problem_name} && cd .. && oj test -c "rust/target/debug/${problem_name}" -d ${dir_name}/test/${problem_name//-/_} 
+    # export RUST_BACKTRACE=1
+    cd rust && cargo build --release --bin ${problem_name} && cd .. && oj test -c "rust/target/release/${problem_name}" -d ${dir_name}/test/${problem_name//-/_} 
 else
     oj test -c "python ${file_path}" -d ${dir_name}/test/${problem_name//-/_}
     # oj test -e 1e-6 -c "python ${file_path}" -d ${dir_name}/test/${problem_name//-/_}

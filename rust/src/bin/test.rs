@@ -9,8 +9,9 @@ fn main(){
     // println!("{:?}",u);
     // let v:Vec<char>=u.chars().collect();
     // println!("{:?}",v[1]);
-    let a = [1,2,3,4,5];
-    for i in a.iter(){
-        println!("{}",i);
-    }
+    // let a = [1,2,3,4,5];
+    // for i in a.iter(){
+    //     println!("{}",i);
+    // }
+    println!("{}",std::usize::MIN);
 }

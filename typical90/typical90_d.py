@@ -8,6 +8,7 @@ for j in range(w):
     for i in range(h):
         c[j]+=a[i][j]
 for i in range(h):
+    l=[]
     for j in range(w):
-        print(r[i]+c[j]-a[i][j],end=' ')
-    print()
+        l.append(r[i]+c[j]-a[i][j])
+    print(*l)

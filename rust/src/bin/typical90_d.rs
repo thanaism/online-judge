@@ -13,11 +13,11 @@ fn main(){
         }
     }
     for i in 0..h{
-        let mut l:Vec<usize>=vec![];
+        let mut l:Vec<String>=vec![];
         for j in 0..w{
-            l.push(r[i]+c[j]-a[i][j]);
+            l.push((r[i]+c[j]-a[i][j]).to_string());
         }
-        println!("{:?}",l);
+        println!("{}",l.join(" "));
     }
 
 }

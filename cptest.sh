@@ -24,7 +24,7 @@ elif [ $extension = "rs" ]; then
     # export RUST_BACKTRACE=1
     cd rust && cargo build --release --bin ${problem_name} && cd .. && oj test -c "rust/target/release/${problem_name}" -d ${dir_name}/.test/${problem_name//-/_} 
 else
-    oj test -c "python ${file_path}" -d ${dir_name}/.test/${problem_name//-/_}
+    oj test -c "python3 ${file_path}" -d ${dir_name}/.test/${problem_name//-/_}
     # oj test -e 1e-6 -c "python ${file_path}" -d ${dir_name}/test/${problem_name//-/_}
 fi
 

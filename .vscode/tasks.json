@@ -12,7 +12,6 @@
       "type": "shell",
       "command": "${workspaceFolder}/cptest.sh",
       "args": [
-        //   "${fileBasenameNoExtension}"
         "${file}"
       ]
     },
@@ -21,7 +20,6 @@
       "type": "shell",
       "command": "${workspaceFolder}/cptest_eps.sh",
       "args": [
-        //   "${fileBasenameNoExtension}"
         "${file}"
       ]
     },
@@ -30,17 +28,16 @@
       "type": "shell",
       "command": "${workspaceFolder}/cpsub.sh",
       "args": [
-        //   "${fileBasenameNoExtension}"
         "${file}",
         "python3"
-      ]
+      ],
+      "problemMatcher": []
     },
     {
       "label": "submit PyPy3",
       "type": "shell",
       "command": "${workspaceFolder}/cpsub.sh",
       "args": [
-        //   "${fileBasenameNoExtension}"
         "${file}",
         "pypy3"
       ]

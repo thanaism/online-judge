@@ -5,8 +5,10 @@ fn main(){
         q:usize,
         lr:[(usize,usize);q]
     }
-    let mut one:Vec<usize>=(0..=n).map(|_|0).collect();
-    let mut two:Vec<usize>=(0..=n).map(|_|0).collect();
+    // let mut one:Vec<usize>=(0..=n).map(|_|0).collect();
+    // let mut two:Vec<usize>=(0..=n).map(|_|0).collect();
+    let mut one=vec![0usize;n+1];
+    let mut two=vec![0usize;n+1];
     for i in 0..n{
         if cp[i].0==1{
             one[i+1]=cp[i].1+one[i];

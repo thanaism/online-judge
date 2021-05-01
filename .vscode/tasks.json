@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "test samples",
+      "label": "test",
       "group": {
         "kind": "build",
         "isDefault": true
@@ -16,7 +16,11 @@
       ]
     },
     {
-      "label": "test samples eps",
+      "label": "test eps",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "type": "shell",
       "command": "${workspaceFolder}/cptest_eps.sh",
       "args": [
@@ -24,7 +28,11 @@
       ]
     },
     {
-      "label": "submit Rust or Python3",
+      "label": "submit",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "type": "shell",
       "command": "${workspaceFolder}/cpsub.sh",
       "args": [
@@ -35,6 +43,10 @@
     },
     {
       "label": "submit PyPy3",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "type": "shell",
       "command": "${workspaceFolder}/cpsub.sh",
       "args": [

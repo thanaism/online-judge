@@ -1,7 +1,6 @@
 fn main(){
     proconio::input!{
-        n:usize,
-        k:isize,
+        n:usize, k:isize,
         a:[isize;n],
         b:[isize;n]
     }

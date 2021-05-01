@@ -5,7 +5,8 @@ fn main(){
         b:usize,
         c:usize
     }
-    let mut ans = 1000000000;
+    // let mut ans = 1000000000;
+    let mut ans = 1<<30;
     for i in 0..10000{
         for j in 0..10000{
             let d = n-a*i-b*j;

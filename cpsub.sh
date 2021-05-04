@@ -7,6 +7,11 @@ problem_name=${file_name%.*}
 test_dir=${dir_name}/test/${problem_name//-/_}
 base_url=${problem_name%_*}
 
+# read -p "処理を進めてよろしいですか？  (y/n) :" YN
+# if [ "${YN}" = "n" ]; then
+#   exit 1;
+# fi
+
 # GNU time
 export PATH="/usr/local/opt/gnu-time/libexec/gnubin:$PATH"
 

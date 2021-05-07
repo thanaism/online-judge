@@ -29,10 +29,6 @@
     },
     {
       "label": "submit",
-      // "group": {
-      //   "kind": "build",
-      //   "isDefault": true
-      // },
       "type": "shell",
       "command": "${workspaceFolder}/cpsub.sh",
       "args": [
@@ -43,16 +39,12 @@
     },
     {
       "label": "submit PyPy3",
-      // "group": {
-      //   "kind": "build",
-      //   "isDefault": true
-      // },
       "type": "shell",
       "command": "${workspaceFolder}/cpsub.sh",
       "args": [
         "${file}",
         "pypy3"
       ]
-    }
+    },
   ]
 }

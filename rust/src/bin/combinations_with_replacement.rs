@@ -1,4 +1,4 @@
-// fn main() {
+fn main() {
 //     let n = 5usize;
 //     let r = 3usize;
 //     // let mut pool:Vec<usize> = (0..n).collect();
@@ -19,4 +19,4 @@
 //         println!("{:?}",indices.iter().map(|i|pool[*i]).collect::<Vec<usize>>());
 //     }
 //     println!("{:?}",hp);
-// }
+}

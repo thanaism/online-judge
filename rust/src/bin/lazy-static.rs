@@ -21,9 +21,13 @@ fn main() {
 fn sub() {
     // let vec = &mut *V.lock().unwrap();
     // let vec = &mut V.lock().unwrap();
-    let mut vec = V.lock().unwrap();
-    vec[1][1]=900;
-    vec[3][3]=350;
+    // let mut vec = V.lock().unwrap();
+    print_type_of(&mut *V.lock().unwrap());
+    // vec[1][1]=900;
+    // vec[3][3]=350;
     // V.lock().unwrap()[0][2] = 1000;
     // V.lock().unwrap()[0][3] = 1000;
+}
+fn print_type_of<T>(_: T) {
+    println!("{}", std::any::type_name::<T>());
 }

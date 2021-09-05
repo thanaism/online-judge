@@ -19,7 +19,7 @@ if [ ! -e ${test_dir} ]; then
 fi
 
 if [ $extension = "cpp" ]; then
-    g++ ${file_path} && oj test -d ${dir_name}/.test/${problem_name//-/_}
+    g++ ${file_path} -std=c++14 && oj test -d ${dir_name}/.test/${problem_name//-/_}
 elif [ $extension = "rs" ]; then
     # export RUST_BACKTRACE=1
     cd ${dir_name} && cargo build --release --bin ${problem_name} && cd - && oj test -c "${dir_name}/../../target/release/${problem_name}" -d ${dir_name}/.test/${problem_name//-/_} 

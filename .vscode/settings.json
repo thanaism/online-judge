@@ -2,5 +2,9 @@
   "python.pythonPath": ".venv/bin/python",
   "python.venvPath": ".venv",
   "editor.formatOnSave": false,
-  "editor.detectIndentation": false,
+"editor.detectIndentation": false,
+"files.associations": {
+	"*.hs": "haskell",
+	"vector": "cpp"
+},
 }

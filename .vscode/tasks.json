@@ -5,10 +5,7 @@
   "tasks": [
     {
       "label": "test",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
+	  "group": "build",
       "type": "shell",
       "command": "${workspaceFolder}/cptest.sh",
       "args": [
@@ -17,10 +14,7 @@
     },
     {
       "label": "test eps",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
+	  "group": "build",
       "type": "shell",
       "command": "${workspaceFolder}/cptest_eps.sh",
       "args": [
@@ -56,5 +50,16 @@
         "pypy3"
       ]
     },
+	{
+		"label": "AOJ test",
+		"type": "shell",
+		"group": "build",
+		"command": "cd $(dirname ${file}) && aoj test",
+	},
+	{
+		"label": "AOJ submit",
+		"type": "shell",
+		"command": "cd $(dirname ${file}) && aoj submit",
+	}
   ]
 }

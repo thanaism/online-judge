@@ -48,14 +48,14 @@
 	},
 	"enumerate()":{
 		"scope":"python",
-		"prefix": "en",
+		"prefix": "enumerate",
 		"body": [
 			"enumerate(${1:})"
 		],
 	},
 	"input()":{
 		"scope":"python",
-		"prefix": "in",
+		"prefix": "input()",
 		"body": [
 			"input()"
 		],
@@ -74,4 +74,32 @@
 			"map(int,open(0).read().split())"
 		],
 	},
+	"class DSU:": {
+        "scope": "python",
+        "prefix": "class DSU:",
+        "body": [
+			"# Disjoint Set Union library",
+            "class DSU:",
+            "\tdef __init__(self,n):",
+            "\t\tself.parent=[-1]*n",
+            "\tdef root(self,x):",
+            "\t\tif self.parent[x]<0:return x",
+            "\t\tself.parent[x]=self.root(self.parent[x])",
+            "\t\treturn self.parent[x]",
+            "\tdef merge(self,x,y):",
+            "\t\trx=self.root(x)",
+            "\t\try=self.root(y)",
+            "\t\tif rx==ry:return",
+            "\t\tif rx>ry:rx,ry=ry,rx",
+            "\t\tself.parent[rx]+=self.parent[ry]",
+            "\t\tself.parent[ry]=rx",
+            "\tdef size(self,x):",
+            "\t\treturn -self.parent[self.root(x)]",
+			"\tdef connected(self,x,y):",
+			"\t\treturn self.root(x)==self.root(y)",
+			"# Disjoint Set Union library",
+			"",
+        ],
+        "description": "Union Find Tree"
+    },
 }

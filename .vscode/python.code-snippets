@@ -1,24 +1,18 @@
 {
 	"input().split()":{
 		"scope":"python",
-		"prefix": "is",
-		"body": [
-			"input().split()"
-		],
+		"prefix": "input().split()",
+		"body": "input().split()",
 	},
 	"map(int,input().split())":{
 		"scope":"python",
-		"prefix": "mi",
-		"body": [
-			"map(int,input().split())"
-		],
+		"prefix": "map(int,input().split())",
+		"body": "map(int,input().split())",
 	},
 	"[*map(int,input().split())]":{
 		"scope":"python",
-		"prefix": "lim",
-		"body": [
-			"[*map(int,input().split())]"
-		],
+		"prefix": "list(map(int,input().split()))",
+		"body": "[*map(int,input().split())]",
 	},
 	"nested loop double":{
 		"scope":"python",
@@ -41,38 +35,28 @@
 	},
 	"int(input())":{
 		"scope":"python",
-		"prefix": "ii",
-		"body": [
-			"int(input())"
-		],
+		"prefix": "int(input())",
+		"body": "int(input())",
 	},
 	"enumerate()":{
 		"scope":"python",
 		"prefix": "enumerate",
-		"body": [
-			"enumerate(${1:})"
-		],
+		"body": "enumerate(${1:})",
 	},
 	"input()":{
 		"scope":"python",
 		"prefix": "input()",
-		"body": [
-			"input()"
-		],
+		"body": "input()",
 	},
 	"map(int,open(0))":{
 		"scope":"python",
-		"prefix": "mio",
-		"body": [
-			"map(int,open(0))"
-		],
+		"prefix": "map(int,open(0))",
+		"body": "map(int,open(0))",
 	},
 	"map(int,open(0).read().split())":{
 		"scope":"python",
-		"prefix": "mios",
-		"body": [
-			"map(int,open(0).read().split())"
-		],
+		"prefix": "map(int,open(0).read().split())",
+		"body": "map(int,open(0).read().split())",
 	},
 	"class DSU:": {
         "scope": "python",

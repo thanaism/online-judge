@@ -5,61 +5,51 @@
   "tasks": [
     {
       "label": "test",
-	  "group": "build",
       "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "command": "${workspaceFolder}/cptest.sh",
-      "args": [
-        "${file}"
-      ]
+      "args": ["${file}"]
     },
     {
       "label": "test eps",
-	  "group": "build",
       "type": "shell",
+      "group": "build",
       "command": "${workspaceFolder}/cptest_eps.sh",
-      "args": [
-        "${file}"
-      ]
+      "args": ["${file}"]
     },
     {
       "label": "submit",
       "type": "shell",
       "command": "${workspaceFolder}/cpsub.sh",
-      "args": [
-        "${file}",
-        "python3"
-      ],
+      "args": ["${file}", "python3"],
       "problemMatcher": []
     },
     {
       "label": "submit no open",
       "type": "shell",
       "command": "${workspaceFolder}/cpsub_no-open.sh",
-      "args": [
-        "${file}",
-        "python3"
-      ],
+      "args": ["${file}", "python3"],
       "problemMatcher": []
     },
     {
       "label": "submit PyPy3",
       "type": "shell",
       "command": "${workspaceFolder}/cpsub.sh",
-      "args": [
-        "${file}",
-        "pypy3"
-      ]
+      "args": ["${file}", "pypy3"]
     },
-	{
-		"label": "AOJ test",
-		"type": "shell",
-		"group": "build",
-		"command": "cd $(dirname ${file}) && aoj test",
-	},
-	{
-		"label": "AOJ submit",
-		"type": "shell",
-		"command": "cd $(dirname ${file}) && aoj submit",
-	}
+    {
+      "label": "AOJ test",
+      "type": "shell",
+      "group": "build",
+      "command": "cd $(dirname ${file}) && aoj test"
+    },
+    {
+      "label": "AOJ submit",
+      "type": "shell",
+      "command": "cd $(dirname ${file}) && aoj submit"
+    }
   ]
 }

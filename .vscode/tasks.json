@@ -3,53 +3,63 @@
   // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
-    {
-      "label": "test",
-      "type": "shell",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "command": "${workspaceFolder}/cptest.sh",
-      "args": ["${file}"]
-    },
-    {
-      "label": "test eps",
-      "type": "shell",
-      "group": "build",
-      "command": "${workspaceFolder}/cptest_eps.sh",
-      "args": ["${file}"]
-    },
-    {
-      "label": "submit",
-      "type": "shell",
-      "command": "${workspaceFolder}/cpsub.sh",
-      "args": ["${file}", "python3"],
-      "problemMatcher": []
-    },
-    {
-      "label": "submit no open",
-      "type": "shell",
-      "command": "${workspaceFolder}/cpsub_no-open.sh",
-      "args": ["${file}", "python3"],
-      "problemMatcher": []
-    },
-    {
-      "label": "submit PyPy3",
-      "type": "shell",
-      "command": "${workspaceFolder}/cpsub.sh",
-      "args": ["${file}", "pypy3"]
-    },
-    {
-      "label": "AOJ test",
-      "type": "shell",
-      "group": "build",
-      "command": "cd $(dirname ${file}) && aoj test"
-    },
-    {
-      "label": "AOJ submit",
-      "type": "shell",
-      "command": "cd $(dirname ${file}) && aoj submit"
-    }
-  ]
+	{
+		"label": "AtCoder test",
+		"type": "shell",
+		"command": "${workspaceFolder}/cptest.sh",
+		"args": [
+			"${file}"
+		],
+		"problemMatcher": []
+	},
+	{
+		"label": "AtCoder test (eps)",
+		"type": "shell",
+		"group": "build",
+		"command": "${workspaceFolder}/cptest_eps.sh",
+		"args": [
+			"${file}"
+		]
+	},
+	{
+		"label": "AtCoder submit",
+		"type": "shell",
+		"command": "${workspaceFolder}/cpsub.sh",
+		"args": [
+			"${file}",
+			"python3"
+		],
+		"problemMatcher": []
+	},
+	{
+		"label": "AtCoder submit (no open)",
+		"type": "shell",
+		"command": "${workspaceFolder}/cpsub_no-open.sh",
+		"args": [
+			"${file}",
+			"python3"
+		],
+		"problemMatcher": []
+	},
+	{
+		"label": "AtCoder submit (PyPy3)",
+		"type": "shell",
+		"command": "${workspaceFolder}/cpsub.sh",
+		"args": [
+			"${file}",
+			"pypy3"
+		]
+	},
+	{
+		"label": "AOJ test",
+		"type": "shell",
+		"group": "build",
+		"command": "cd $(dirname ${file}) && aoj test"
+	},
+	{
+		"label": "AOJ submit",
+		"type": "shell",
+		"command": "cd $(dirname ${file}) && aoj submit"
+	}
+]
 }

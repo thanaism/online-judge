@@ -32,5 +32,7 @@ elif [ $extension = "hs" ]; then
 elif [ $extension = "py" ]; then
     oj test -c "python3 ${file_path}" -d ${dir_name}/.test/${problem_name//-/_}
     # oj test -e 1e-6 -c "python ${file_path}" -d ${dir_name}/test/${problem_name//-/_}
+elif [ $extension = "pl" ]; then
+    oj test -c "perl ${file_path}" -d ${dir_name}/.test/${problem_name//-/_}
 fi
 

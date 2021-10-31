@@ -150,18 +150,42 @@
     "scope": "python",
     "prefix": "fact_inv",
     "body": [
-        "# Factorial Inverse library",
-        "MAX_N = ${1:}",
-        "MOD = 10 ** 9 + 7",
-        "fact = [1] * (MAX_N + 1)",
-        "inv = fact.copy()",
-        "fact_inv = fact.copy()",
-        "",
-        "for i in range(2, MAX_N + 1):",
-        "\tfact[i] = fact[i - 1] * i % MOD",
-        "\tinv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD",
-        "\tfact_inv[i] = fact_inv[i - 1] * inv[i] % MOD"
+      "# Factorial Inverse library",
+      "MAX_N = ${1:}",
+      "MOD = 10 ** 9 + 7",
+      "fact = [1] * (MAX_N + 1)",
+      "inv = fact.copy()",
+      "fact_inv = fact.copy()",
+      "",
+      "for i in range(2, MAX_N + 1):",
+      "\tfact[i] = fact[i - 1] * i % MOD",
+      "\tinv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD",
+      "\tfact_inv[i] = fact_inv[i - 1] * inv[i] % MOD"
     ],
     "description": "for binomial coefficient"
-}
+  },
+  "for _ in range(n)": {
+    "scope": "python",
+    "prefix": "for _ in range(n)",
+    "body": ["for ${1:} in range(${2:})"]
+  },
+  "Warshall-Floyed algorithm": {
+    "scope": "python",
+    "prefix": "Warshall-Floyed algorithm",
+    "body": [
+      "# Warshall-Floyed Alogrithm",
+      "# n: vertex_count",
+      "# cost[i][j]: cost from i to j",
+      "INF = 1 << 60",
+      "cost = [[INF] * n for _ in range(n)]",
+      "# --- INPUT COST OF EDGES HERE---",
+      "${1:}",
+      "# --- INPUT COST OF EDGES HERE---",
+      "for k in range(n):",
+      "\tfor i in range(n):",
+      "\t\tfor j in range(n):",
+      "\t\t\tif cost[i][k] != INF and cost[k][j] != INF:",
+      "\t\t\t\tcost[i][j] = min(cost[i][j], cost[i][k] + cost[k][j])"
+    ]
+  }
 }

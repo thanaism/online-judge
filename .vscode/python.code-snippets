@@ -145,5 +145,23 @@
       ""
     ],
     "description": "Kruskal algorithm"
-  }
+  },
+  "factorial inverse": {
+    "scope": "python",
+    "prefix": "fact_inv",
+    "body": [
+        "# Factorial Inverse library",
+        "MAX_N = ${1:}",
+        "MOD = 10 ** 9 + 7",
+        "fact = [1] * (MAX_N + 1)",
+        "inv = fact.copy()",
+        "fact_inv = fact.copy()",
+        "",
+        "for i in range(2, MAX_N + 1):",
+        "\tfact[i] = fact[i - 1] * i % MOD",
+        "\tinv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD",
+        "\tfact_inv[i] = fact_inv[i - 1] * inv[i] % MOD"
+    ],
+    "description": "for binomial coefficient"
+}
 }

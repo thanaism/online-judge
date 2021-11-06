@@ -187,5 +187,77 @@
       "\t\t\tif cost[i][k] != INF and cost[k][j] != INF:",
       "\t\t\t\tcost[i][j] = min(cost[i][j], cost[i][k] + cost[k][j])"
     ]
+  },
+  "zeta transform": {
+    "scope": "python",
+    "prefix": "zeta_transform",
+    "body": [
+      "def zeta_transform(l):",
+      "\tfor i in range(1, len(l)):",
+      "\t\tl[i] += l[i - 1]",
+      "\treturn l",
+      ""
+    ]
+  },
+  "mobius transform": {
+    "scope": "python",
+    "prefix": "mobius_transform",
+    "body": [
+      "def mobius_transform(l):",
+      "\tfor i in range(len(l) - 1, 0, -1):",
+      "\t\tl[i] -= l[i - 1]",
+      "\treturn l",
+      ""
+    ]
+  },
+  "yates function": {
+    "scope": "python",
+    "prefix": "yates_function",
+    "body": [
+      "def yates_function(l, h, w):",
+      "\tfor i in range(h):",
+      "\t\tfor j in range(w):",
+      "\t\t\tif i:",
+      "\t\t\t\tl[i][j] += l[i - 1][j]",
+      "\tfor i in range(h):",
+      "\t\tfor j in range(w):",
+      "\t\t\tif j:",
+      "\t\t\t\tl[i][j] += l[i][j - 1]",
+      "\treturn l",
+      ""
+    ]
+  },
+  "cumulative sum 2d": {
+    "scope": "python",
+    "prefix": "CumulativeSum2d",
+    "body": [
+      "class CumulativeSum2D:",
+      "\tdef __init__(self, h, w):",
+      "\t\tself.h = h + 1",
+      "\t\tself.w = w + 1",
+      "\t\tself.table = [[0] * self.w for _ in range(self.h)]",
+      "",
+      "\tdef add(self, i, j, x):",
+      "\t\tself.table[i + 1][j + 1] += x",
+      "",
+      "\tdef build(self):",
+      "\t\tfor i in range(self.h):",
+      "\t\t\tfor j in range(self.w):",
+      "\t\t\t\tif i:",
+      "\t\t\t\t\tself.table[i][j] += self.table[i - 1][j]",
+      "\t\tfor i in range(self.h):",
+      "\t\t\tfor j in range(self.w):",
+      "\t\t\t\tif j:",
+      "\t\t\t\t\tself.table[i][j] += self.table[i][j - 1]",
+      "",
+      "\tdef get(self, i1, j1, i2, j2):",
+      "\t\treturn (",
+      "\t\t\tself.table[i2][j2]",
+      "\t\t\t- self.table[i2][j1]",
+      "\t\t\t- self.table[i1][j2]",
+      "\t\t\t+ self.table[i1][j1]",
+      "\t\t)",
+      ""
+    ]
   }
 }

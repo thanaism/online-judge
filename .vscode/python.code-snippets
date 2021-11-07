@@ -259,5 +259,57 @@
       "\t\t)",
       ""
     ]
+  },
+  "BIT": {
+    "scope": "python",
+    "prefix": "BinaryIndexedTree",
+    "body": [
+      "class BinaryIndexedTree:",
+      "\tdef __init__(self, n):",
+      "\t\tself.size = n",
+      "\t\tself.tree = [0] * (n + 1)",
+      "",
+      "\tdef sum(self, i):",
+      "\t\ttotal = 0",
+      "\t\twhile i:",
+      "\t\t\ttotal += self.tree[i]",
+      "\t\t\ti -= i & -i",
+      "\t\treturn total",
+      "",
+      "\tdef add(self, i, x):",
+      "\t\twhile i <= self.size:",
+      "\t\t\tself.tree[i] += x",
+      "\t\t\ti += i & -i",
+      ""
+    ]
+  },
+  "FenwickTree": {
+    "scope": "python",
+    "prefix": "FenwickTree",
+    "body": [
+      "class FenwickTree:",
+      "\tdef __init__(self, n, identity_factory, func):",
+      "\t\tself.size = n",
+      "\t\tself.tree = [identity_factory() for _ in range(n + 1)]",
+      "\t\tself.func = func",
+      "\t\tself.idf = identity_factory",
+      "",
+      "\tdef add(self, i, x):",
+      "\t\ttree = self.tree",
+      "\t\tfunc = self.func",
+      "\t\twhile i <= self.size:",
+      "\t\t\ttree[i] = func(tree[i], x)",
+      "\t\t\ti += i & -i",
+      "",
+      "\tdef sum(self, i):",
+      "\t\ts = self.idf()",
+      "\t\ttree = self.tree",
+      "\t\tfunc = self.func",
+      "\t\twhile i > 0:",
+      "\t\t\ts = func(s, tree[i])",
+      "\t\t\ti -= i & -i",
+      "\t\treturn s",
+      ""
+    ]
   }
 }

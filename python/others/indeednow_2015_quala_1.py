@@ -1,3 +1,3 @@
-a=input()
-b=input()
-print(len(a)*len(b))
+a = input()
+b = input()
+print(len(a) * len(b))

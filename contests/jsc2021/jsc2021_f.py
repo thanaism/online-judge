@@ -1,11 +1,14 @@
 #####segfunc#####
 def segfunc(x, y):
-    return max(x,y)
+    return max(x, y)
+
+
 #################
 
 #####ide_ele#####
 ide_ele = -1
 #################
+
 
 class SegTree:
     """
@@ -13,6 +16,7 @@ class SegTree:
     update(k, x): k番目の値をxに更新 O(logN)
     query(l, r): 区間[l, r)をsegfuncしたものを返す O(logN)
     """
+
     def __init__(self, init_val, segfunc, ide_ele):
         """
         init_val: 配列の初期値
@@ -66,18 +70,19 @@ class SegTree:
             r >>= 1
         return res
 
-N,M,Q=map(int,input().split())
-A=[0]*N
-B=[0]*M
-seg_a=SegTree(A, segfunc, ide_ele)
-seg_b=SegTree(B, segfunc, ide_ele)
+
+N, M, Q = map(int, input().split())
+A = [0] * N
+B = [0] * M
+seg_a = SegTree(A, segfunc, ide_ele)
+seg_b = SegTree(B, segfunc, ide_ele)
 for _ in range(Q):
-    T,X,Y=map(int,input().split())
-    if T==1:
-        seg_a.update(X-1, Y)
+    T, X, Y = map(int, input().split())
+    if T == 1:
+        seg_a.update(X - 1, Y)
     else:
-        seg_b.update(X-1, Y)
-    ans=0
+        seg_b.update(X - 1, Y)
+    ans = 0
     for i in range(N):
         for j in range(M):
-            ans+=max()
+            ans += max()

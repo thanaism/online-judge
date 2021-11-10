@@ -7,11 +7,11 @@ N = int(N)
 CNT = 0
 
 for i in range(N):
-  X, Y = stdin.readline().rstrip().split()
-  XX = int(X) ** 2
-  YY = int(Y) ** 2
-  ZZ = XX + YY
-  if ZZ <= DD:
-    CNT += 1
-      
+    X, Y = stdin.readline().rstrip().split()
+    XX = int(X) ** 2
+    YY = int(Y) ** 2
+    ZZ = XX + YY
+    if ZZ <= DD:
+        CNT += 1
+
 print(CNT)

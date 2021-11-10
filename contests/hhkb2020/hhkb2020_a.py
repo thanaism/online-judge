@@ -11,6 +11,6 @@ if s=='Y':
 else:
  print(t)
 """
-s=input()
-t=input()
-print([t,t.upper()][s=='Y'])
+s = input()
+t = input()
+print([t, t.upper()][s == "Y"])

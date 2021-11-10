@@ -47,28 +47,37 @@ print('Yes')
 #     print('No');exit()
 # print('Yes')"""
 
-f=lambda:map(int,input().split())
-n,m=f()
-a=[*f()]
-b=[*f()]
+f = lambda: map(int, input().split())
+n, m = f()
+a = [*f()]
+b = [*f()]
 # Union-Find
-p=[-1]*n
+p = [-1] * n
+
+
 def root(x):
-  if p[x]<0:return x
-  p[x]=root(p[x]);return p[x]
-def union(x,y):
-  rx,ry=root(x),root(y)
-  if rx==ry: return
-  p[ry]=rx
+    if p[x] < 0:
+        return x
+    p[x] = root(p[x])
+    return p[x]
+
+
+def union(x, y):
+    rx, ry = root(x), root(y)
+    if rx == ry:
+        return
+    p[ry] = rx
+
+
 for _ in range(m):
-  c,d=f()
-  union(c-1,d-1)
-sum_a,sum_b=[0]*n,[0]*n
+    c, d = f()
+    union(c - 1, d - 1)
+sum_a, sum_b = [0] * n, [0] * n
 for i in range(n):
-  ri=root(i)
-  sum_a[ri]+=a[i]
-  sum_b[ri]+=b[i]
-if sum_a==sum_b:
-    print('Yes')
+    ri = root(i)
+    sum_a[ri] += a[i]
+    sum_b[ri] += b[i]
+if sum_a == sum_b:
+    print("Yes")
 else:
-    print('No')
+    print("No")

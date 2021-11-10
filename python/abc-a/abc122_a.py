@@ -1,2 +1,2 @@
-b=input()
-print('TGCA'['ACGT'.find(b)])
+b = input()
+print("TGCA"["ACGT".find(b)])

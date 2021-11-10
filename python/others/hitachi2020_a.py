@@ -1,1 +1,1 @@
-print('Yes' if input().replace('hi','')=='' else 'No')
+print("Yes" if input().replace("hi", "") == "" else "No")

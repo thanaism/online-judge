@@ -1,5 +1,5 @@
-c=input()
-if c in 'OPKL':
-    print('Right')
+c = input()
+if c in "OPKL":
+    print("Right")
 else:
-    print('Left')
+    print("Left")

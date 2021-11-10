@@ -1,6 +1,6 @@
-_=int(input())
-s=input()
-if s.count('Y')>0:
-    print('Four')
+_ = int(input())
+s = input()
+if s.count("Y") > 0:
+    print("Four")
 else:
-    print('Three')
+    print("Three")

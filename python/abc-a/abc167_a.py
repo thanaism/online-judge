@@ -1,1 +1,2 @@
-f=input;print('YNeos'[f()!=f()[:-1]::2])
+f = input
+print("YNeos"[f() != f()[:-1] :: 2])

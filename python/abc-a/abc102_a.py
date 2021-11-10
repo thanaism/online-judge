@@ -1,2 +1,2 @@
-n=int(input())
-print(n if ~n&1 else n*2)
+n = int(input())
+print(n if ~n & 1 else n * 2)

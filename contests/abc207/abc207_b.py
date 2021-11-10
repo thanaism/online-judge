@@ -1,6 +1,6 @@
-a,b,c,d=map(int,input().split())
-k=d*c-b
-if k<=0:
-	print(-1)
+a, b, c, d = map(int, input().split())
+k = d * c - b
+if k <= 0:
+    print(-1)
 else:
-	print(-(-a//k))
+    print(-(-a // k))

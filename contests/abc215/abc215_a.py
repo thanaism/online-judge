@@ -1,5 +1,5 @@
-s=input()
-if s=='Hello,World!':
-	print('AC')
+s = input()
+if s == "Hello,World!":
+    print("AC")
 else:
-	print('WA')
+    print("WA")

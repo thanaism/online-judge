@@ -1,2 +1,2 @@
-l=[*map(int,input().split())]
-print(sum([7-i for i in l]))
+l = [*map(int, input().split())]
+print(sum([7 - i for i in l]))

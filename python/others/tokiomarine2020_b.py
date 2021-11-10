@@ -1,9 +1,9 @@
-a,v=map(int,input().split())
-b,w=map(int,input().split())
-t=int(input())
-dx=abs(a-b)
-ds=v-w
-print('YES' if t*ds>=dx else 'NO')
+a, v = map(int, input().split())
+b, w = map(int, input().split())
+t = int(input())
+dx = abs(a - b)
+ds = v - w
+print("YES" if t * ds >= dx else "NO")
 
 # よく見たら制約10の9乗だった
 # i=0

@@ -1,3 +1,3 @@
-x=input()
-s=input()
-print(s.replace(x,''))
+x = input()
+s = input()
+print(s.replace(x, ""))

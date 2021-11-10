@@ -10,7 +10,7 @@
 #         else:
 #             self.num_end_leaves = 2**(len(nb))
 #         self.array = [identity for i in range(self.num_end_leaves * 2)]
-#         self.identity = identity 
+#         self.identity = identity
 #         self.operator =operator
 #     def update(self,x,val):
 #         actual_x = x+self.num_end_leaves
@@ -32,12 +32,15 @@
 
 #####segfunc#####
 def segfunc(x, y):
-    return x^y
+    return x ^ y
+
+
 #################
 
 #####ide_ele#####
 ide_ele = 0
 #################
+
 
 class SegTree:
     """
@@ -45,6 +48,7 @@ class SegTree:
     update(k, x): k番目の値をxに更新 O(logN)
     query(l, r): 区間[l, r)をsegfuncしたものを返す O(logN)
     """
+
     def __init__(self, init_val, segfunc, ide_ele):
         """
         init_val: 配列の初期値
@@ -98,21 +102,23 @@ class SegTree:
             r >>= 1
         return res
 
+
 def main():
-    n,q=map(int,input().split())
+    n, q = map(int, input().split())
     # seg=segtree(n,xor,0)
-    a=[*map(int,input().split())]
+    a = [*map(int, input().split())]
     # b=0
-    seg=SegTree(a,segfunc,ide_ele)
+    seg = SegTree(a, segfunc, ide_ele)
     # for i,v in enumerate(a):
     #     seg.update(i+1,v)
     for _ in range(q):
-        t,x,y=map(int,input().split())
-        if t==1:
+        t, x, y = map(int, input().split())
+        if t == 1:
             # seg.update(x-1,seg.array[x+seg.num_end_leaves]^y)
-            seg.update(x-1,seg.query(x-1,x)^y)
+            seg.update(x - 1, seg.query(x - 1, x) ^ y)
         else:
             # print(seg.get(x-1,y))
-            print(seg.query(x-1,y))
+            print(seg.query(x - 1, y))
+
 
 main()

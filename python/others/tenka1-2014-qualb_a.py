@@ -1,2 +1,2 @@
-s=input()
-print(s.replace('HAGIYA','HAGIXILE'))
+s = input()
+print(s.replace("HAGIYA", "HAGIXILE"))

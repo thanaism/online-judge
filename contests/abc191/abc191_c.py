@@ -1,16 +1,17 @@
-h,w=map(int,input().split())
-grid=[]
+h, w = map(int, input().split())
+grid = []
 for _ in range(h):
     grid.append(input())
-ans=0
-for i in range(1,h):
-    for j in range(1,w):
-        c=0
-        for ii in [i,i-1]:
-            for jj in [j,j-1]:
-                if grid[ii][jj]=='#':c+=1
-        if c&1:
-            ans+=1
+ans = 0
+for i in range(1, h):
+    for j in range(1, w):
+        c = 0
+        for ii in [i, i - 1]:
+            for jj in [j, j - 1]:
+                if grid[ii][jj] == "#":
+                    c += 1
+        if c & 1:
+            ans += 1
 print(ans)
 # from collections import deque
 # di=[-1,0,1,0]

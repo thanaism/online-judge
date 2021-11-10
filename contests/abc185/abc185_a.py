@@ -1,2 +1,2 @@
-l=[*map(int,input().split())]
+l = [*map(int, input().split())]
 print(min(l))

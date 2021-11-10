@@ -1,2 +1,2 @@
-x=input()
-print(ord(x)-ord('A')+1)
+x = input()
+print(ord(x) - ord("A") + 1)

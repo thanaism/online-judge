@@ -17,25 +17,30 @@
 #     return ans
 # print(main())
 
+
 def main():
-    n=int(input())
-    p=set()
-    q=[]
+    n = int(input())
+    p = set()
+    q = []
     for _ in range(n):
-        x,y=map(int,input().split())
-        p|={(x,y)}
-        q.append([x,y])
-    ans=0
+        x, y = map(int, input().split())
+        p |= {(x, y)}
+        q.append([x, y])
+    ans = 0
     for i in range(n):
-        for j in range(i+1,n):
-            x1,y1=q[i]
-            x2,y2=q[j]
-            dx=x2-x1
-            dy=y1-y2
-            x3,y3=x2-dy,y2-dx
-            x4,y4=x1-dy,y1-dx
-            if (x3,y3) not in p:continue
-            if (x4,y4) not in p:continue
-            ans=max(ans,dx*dx+dy*dy)
+        for j in range(i + 1, n):
+            x1, y1 = q[i]
+            x2, y2 = q[j]
+            dx = x2 - x1
+            dy = y1 - y2
+            x3, y3 = x2 - dy, y2 - dx
+            x4, y4 = x1 - dy, y1 - dx
+            if (x3, y3) not in p:
+                continue
+            if (x4, y4) not in p:
+                continue
+            ans = max(ans, dx * dx + dy * dy)
     return ans
+
+
 print(main())

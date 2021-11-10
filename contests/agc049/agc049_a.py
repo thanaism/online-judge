@@ -41,13 +41,15 @@ for i in range(n):
         # キューから頂点を取り出し
         v = que.pop()
         # 削除済なら次の頂点へ
-        if deleted[v]: continue
+        if deleted[v]:
+            continue
         # 削除済フラグを立てる
         deleted[v] = True
         # 頂点vから頂点uに辺があるかチェック
         for u in range(n):
             # 削除済または辺がない場合は次へ
-            if deleted[u] or s[u][v] == '0': continue
+            if deleted[u] or s[u][v] == "0":
+                continue
             # 未削除の辺があれば頂点uをキューに追加
             que.append(u)
     # 頂点vから到達可能な全頂点の逆数を加える

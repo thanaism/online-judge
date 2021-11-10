@@ -1,11 +1,12 @@
-n=int(input())
-a=[*map(int,input().split())]
-k=1
-ans=0
+n = int(input())
+a = [*map(int, input().split())]
+k = 1
+ans = 0
 for i in a:
-    if i==k:
-        k+=1
+    if i == k:
+        k += 1
     else:
-        ans+=1
-if ans==n:ans=-1    
+        ans += 1
+if ans == n:
+    ans = -1
 print(ans)

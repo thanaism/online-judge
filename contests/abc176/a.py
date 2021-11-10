@@ -1,2 +1,2 @@
-n,x,t=map(int,input().split())
-print(t*((n-1+x)//x))
+n, x, t = map(int, input().split())
+print(t * ((n - 1 + x) // x))

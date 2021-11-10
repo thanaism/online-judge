@@ -7,15 +7,17 @@
 # 時間が厳しければ重複が生じた時点でループを抜ける処理を追加
 
 from sys import stdin
+
 K = int(stdin.readline().rstrip())
+
+
 def main(K):
-  a=0
-  for i in range(K):
-    a = ((10%K) * a + 7)%K
-    if a == 0:
-      return i + 1
-  return -1
+    a = 0
+    for i in range(K):
+        a = ((10 % K) * a + 7) % K
+        if a == 0:
+            return i + 1
+    return -1
+
+
 print(main(K))
-
-
-

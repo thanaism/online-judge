@@ -18,6 +18,7 @@
 #   u(a-1,b-1)
 # print(-min(p))
 
-from networkx import*
-_,*n=map(str.split,open(0))
-print(max(*map(len,[*connected_components(Graph(n))]),1,1))
+from networkx import *
+
+_, *n = map(str.split, open(0))
+print(max(*map(len, [*connected_components(Graph(n))]), 1, 1))

@@ -7,32 +7,34 @@
 #   # stdin.readline().rstrip().split()
 #   # print(ary[i])
 # cnt = 0
-def get_divisible_count(num,divider):
-  result = 0
-  while True:    
-    if num%divider ==0:
-      result += 1
-      # num /= divider
-      num = int(num/divider)
-    else:
-      break
-  return result
+def get_divisible_count(num, divider):
+    result = 0
+    while True:
+        if num % divider == 0:
+            result += 1
+            # num /= divider
+            num = int(num / divider)
+        else:
+            break
+    return result
 
-def is_divisible(num,divider,times):
-  result = 0
-  while True:    
-    if result ==times:
-      return True
-    elif num%divider ==0:
-      result += 1
-      # num /= divider
-      num = int(num/divider)
-    else:
-      break
-  return False
 
-print(get_divisible_count(27,3))
-print(is_divisible(27,3,4))
+def is_divisible(num, divider, times):
+    result = 0
+    while True:
+        if result == times:
+            return True
+        elif num % divider == 0:
+            result += 1
+            # num /= divider
+            num = int(num / divider)
+        else:
+            break
+    return False
+
+
+print(get_divisible_count(27, 3))
+print(is_divisible(27, 3, 4))
 
 # for i in range(N):
 

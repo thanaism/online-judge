@@ -16,23 +16,20 @@ for i in range(n):
 print(count)
 """
 # PyPyにしたら通った
-n,s=input().split()
-n=int(n)
-a=[0]
-g=[0]
-c=[0]
-t=[0]
+n, s = input().split()
+n = int(n)
+a = [0]
+g = [0]
+c = [0]
+t = [0]
 for i in range(n):
-  a.append(s[0:i+1].count('A'))
-  g.append(s[0:i+1].count('G'))
-  c.append(s[0:i+1].count('C'))
-  t.append(s[0:i+1].count('T'))
-count=0
+    a.append(s[0 : i + 1].count("A"))
+    g.append(s[0 : i + 1].count("G"))
+    c.append(s[0 : i + 1].count("C"))
+    t.append(s[0 : i + 1].count("T"))
+count = 0
 for i in range(n):
-  for j in range(i+1,n+1):
-   if all([
-    a[j]-a[i]==t[j]-t[i],
-    g[j]-g[i]==c[j]-c[i]
-   ]):
-    count+=1
+    for j in range(i + 1, n + 1):
+        if all([a[j] - a[i] == t[j] - t[i], g[j] - g[i] == c[j] - c[i]]):
+            count += 1
 print(count)

@@ -1,2 +1,2 @@
-n=int(input())
-print(10**n+7)
+n = int(input())
+print(10 ** n + 7)

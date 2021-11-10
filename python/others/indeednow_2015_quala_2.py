@@ -1,6 +1,6 @@
-n=int(input())
+n = int(input())
 for _ in range(n):
-    if sorted(input())==sorted('indeednow'):
-        print('YES')
+    if sorted(input()) == sorted("indeednow"):
+        print("YES")
     else:
-        print('NO')
+        print("NO")

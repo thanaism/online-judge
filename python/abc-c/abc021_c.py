@@ -3,6 +3,7 @@ from heapq import heappush, heappop
 INF = 1 << 60
 MOD = 10 ** 9 + 7
 
+
 def dijkstra(s, n):
     dist = [INF] * n
     num = [0] * n
@@ -24,6 +25,7 @@ def dijkstra(s, n):
                     num[to] %= MOD
     return dist, num
 
+
 n = int(input())
 a, b = map(int, input().split())
 m = int(input())
@@ -34,5 +36,5 @@ for _ in range(m):
     y -= 1
     adj[x].append((y, 1))
     adj[y].append((x, 1))
-dist, num = dijkstra(a-1, n)
+dist, num = dijkstra(a - 1, n)
 print(num[b - 1])

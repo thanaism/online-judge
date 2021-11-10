@@ -1,5 +1,5 @@
-a,b=map(int,input().split())
-if a<=b<=a*6:
-	print('Yes')
+a, b = map(int, input().split())
+if a <= b <= a * 6:
+    print("Yes")
 else:
-	print('No')
+    print("No")

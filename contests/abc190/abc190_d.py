@@ -35,11 +35,13 @@
 #     ans|={(x,y)}
 # # print(ans)
 # print(len(ans))
-n=int(input())*2
-ans=0
-for i in range(1,n+1):
-    if i*i>n:break
-    if n%i==0:
-        a,b=i&1,(n//i)&1
-        if a^b:ans+=1
-print(ans*2)
+n = int(input()) * 2
+ans = 0
+for i in range(1, n + 1):
+    if i * i > n:
+        break
+    if n % i == 0:
+        a, b = i & 1, (n // i) & 1
+        if a ^ b:
+            ans += 1
+print(ans * 2)

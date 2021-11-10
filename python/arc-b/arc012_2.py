@@ -1,4 +1,4 @@
-n,a,b,l=map(int,input().split())
+n, a, b, l = map(int, input().split())
 for _ in range(n):
-    l=b*l/a
+    l = b * l / a
 print(l)

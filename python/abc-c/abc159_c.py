@@ -6,5 +6,5 @@ for i in range(l):
             ans=max((l-i-j)*i*j,ans)
 print(ans)"""
 
-l=int(input())
-print((l/3)**3)
+l = int(input())
+print((l / 3) ** 3)

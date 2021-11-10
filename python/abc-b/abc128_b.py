@@ -11,4 +11,9 @@ for i in sorted(sl):
     for j in sorted(shops[i],reverse=True):
         print(j[1])"""
 
-print(*sorted(range(1,int(input())+1),key=lambda _:[(s,-int(p))for s,p in[input().split()]]))
+print(
+    *sorted(
+        range(1, int(input()) + 1),
+        key=lambda _: [(s, -int(p)) for s, p in [input().split()]],
+    )
+)

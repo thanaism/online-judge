@@ -1,2 +1,2 @@
-a=input()
-print('A' if a==a.upper() else 'a')
+a = input()
+print("A" if a == a.upper() else "a")

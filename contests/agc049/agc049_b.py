@@ -18,34 +18,41 @@ for i in range(n):
 if s!=t:cnt=-1
 print(cnt)
 """
+
+
 def solve():
-  # 入力
-  n=int(input())
-  s=[int(l) for l in input()]
-  t=[int(l) for l in input()]
-  # 累積XOR
-  xs=[0]
-  xt=[0]
-  for i in s: xs.append(xs[-1]^i)
-  for i in t: xt.append(xt[-1]^i)
-  print(xs,xt)
-  # S[j]!=S[j+1]となりうる最小のj
-  ans=j=0
-  for i in range(n+1):
-    # iがjを追い越したら更新
-    j=max(j,i)
-    # 操作不要ならスキップ
-    if xs[j]==xt[i]:continue
-    # Sが変化しない範囲でインクリメント
-    while j<n and xs[j]==xs[j+1]:j+=1
-    # 条件を満たすjがなければ不可能
-    if j==n:return -1
-    # S[j]==T[i]とするためインクリメント
-    j+=1
-    # 距離が操作回数と等しい
-    ans+=j-i
-  return ans
+    # 入力
+    n = int(input())
+    s = [int(l) for l in input()]
+    t = [int(l) for l in input()]
+    # 累積XOR
+    xs = [0]
+    xt = [0]
+    for i in s:
+        xs.append(xs[-1] ^ i)
+    for i in t:
+        xt.append(xt[-1] ^ i)
+    print(xs, xt)
+    # S[j]!=S[j+1]となりうる最小のj
+    ans = j = 0
+    for i in range(n + 1):
+        # iがjを追い越したら更新
+        j = max(j, i)
+        # 操作不要ならスキップ
+        if xs[j] == xt[i]:
+            continue
+        # Sが変化しない範囲でインクリメント
+        while j < n and xs[j] == xs[j + 1]:
+            j += 1
+        # 条件を満たすjがなければ不可能
+        if j == n:
+            return -1
+        # S[j]==T[i]とするためインクリメント
+        j += 1
+        # 距離が操作回数と等しい
+        ans += j - i
+    return ans
+
+
 # 出力
 print(solve())
-
-

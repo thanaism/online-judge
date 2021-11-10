@@ -1,6 +1,6 @@
-n=int(input())
-t=[*map(int,input().split())]
-s=sum(t)
+n = int(input())
+t = [*map(int, input().split())]
+s = sum(t)
 """
 dp=[[False]*(s+1) for _ in range(n+1)]
 dp[0][0]=True
@@ -16,13 +16,13 @@ for i in range(ans,s+1):
     if dp[-1][i]:
         print(i);break
 """
-dp = [False] * (s+1)
+dp = [False] * (s + 1)
 dp[0] = True
 for i in range(n):
-    for j in reversed(range(t[i],s+1)):
-        dp[j]|=dp[j-t[i]]
-ans = (s+1)//2
+    for j in reversed(range(t[i], s + 1)):
+        dp[j] |= dp[j - t[i]]
+ans = (s + 1) // 2
 while not dp[ans]:
-    ans+=1
+    ans += 1
 print(ans)
 # """

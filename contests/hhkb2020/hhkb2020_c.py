@@ -10,13 +10,13 @@ for k in p:
    break
 """
 
-n=int(input())
-*p,=map(int,input().split())
-ok=[True]*300000
-min=0
+n = int(input())
+(*p,) = map(int, input().split())
+ok = [True] * 300000
+min = 0
 for k in p:
- ok[k]=False
- if min==k:
-  while ok[min] is False:
-   min+=1
- print(min)
+    ok[k] = False
+    if min == k:
+        while ok[min] is False:
+            min += 1
+    print(min)

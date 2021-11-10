@@ -46,15 +46,18 @@
 #     print(ans)
 # main()
 
-n=int(input())
-s=input()
-ans=0
+n = int(input())
+s = input()
+ans = 0
 for i in range(1000):
     # t=f'{i:03d}'
-    t=str(i).zfill(3)
-    k=0
+    t = str(i).zfill(3)
+    k = 0
     for j in range(n):
-        if s[j]==t[k]:k+=1
-        if k==3:break
-    if k==3:ans+=1
+        if s[j] == t[k]:
+            k += 1
+        if k == 3:
+            break
+    if k == 3:
+        ans += 1
 print(ans)

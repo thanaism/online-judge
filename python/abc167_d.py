@@ -1,34 +1,45 @@
 n, k = map(int, input().split())
 a = [*map(int, input().split())]
 
-x = 1
-s = set()
-c = 0
-while x not in s:
-    s.add(x)
-    last_town = x
-    x = a[x - 1]
-    c += 1
+cnt = 0
+now = 0
+seen = set()
+seen.add(0)
+while True:
+    last_town = now + 1
+    if cnt < k:
+        cnt += 1
+    else:
+        break
+    now = a[now] - 1
+    if now in seen:
+        if cnt == k:
+            print(now + 1)
+            exit()
+        break
+    else:
+        seen.add(now)
 
-loop = 1
-while x != last_town:
-    x = a[x - 1]
-    loop += 1
+if cnt == k:
+    print(last_town)
+    exit()
 
-ans = None
-if k < c:
-    x = 1
-    while k:
-        k -= 1
-        ans = x
-        x = a[x - 1]
-    print(ans)
-else:
-    k -= c
-    k = k % loop
-    x = last_town
-    while k:
-        k -= 1
-        ans = x
-        x = a[x - 1]
-    print(ans)
+loop_cnt = 0
+start = now
+while True:
+    loop_cnt += 1
+    start = a[start] - 1
+    if start == now:
+        break
+
+remain = (k - cnt) % loop_cnt
+cnt = 0
+while True:
+    last_town = now + 1
+    if cnt < remain:
+        cnt += 1
+    else:
+        break
+    now = a[now] - 1
+
+print(last_town)

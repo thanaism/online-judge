@@ -7,7 +7,7 @@ if not (n * 2 <= m <= n * 4):
 d = m - n * 2
 if d <= n:
     print(a := n - d, b := d, c := 0)
-    assert(m == a * 2 + b * 3 + c * 4)
+    assert m == a * 2 + b * 3 + c * 4
 else:
     print(a := 0, b := 2 * n - d, c := d - n)
-    assert(m == a * 2 + b * 3 + c * 4)
+    assert m == a * 2 + b * 3 + c * 4

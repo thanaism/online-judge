@@ -6,11 +6,11 @@ trailing_a = set()
 
 ab = 0
 for i in range(n):
-    if s[i][0] == 'B':
+    if s[i][0] == "B":
         leading_b.add(i)
-    if s[i][-1] == 'A':
+    if s[i][-1] == "A":
         trailing_a.add(i)
-    ab += s[i].count('AB')
+    ab += s[i].count("AB")
 
 n_a = len(trailing_a)
 n_b = len(leading_b)

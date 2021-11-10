@@ -1,11 +1,14 @@
 #####segfunc#####
 def segfunc(x, y):
-    return max(x,y)
+    return max(x, y)
+
+
 #################
 
 #####ide_ele#####
 ide_ele = 0
 #################
+
 
 class SegTree:
     """
@@ -13,6 +16,7 @@ class SegTree:
     update(k, x): k番目の値をxに更新 O(logN)
     query(l, r): 区間[l, r)をsegfuncしたものを返す O(logN)
     """
+
     def __init__(self, init_val, segfunc, ide_ele):
         """
         init_val: 配列の初期値
@@ -66,35 +70,38 @@ class SegTree:
             r >>= 1
         return res
 
+
 n = int(input())
-p = [*map(int,input().split())]
-for i in range(n): p[i]-=1
-a,b,c = [],[],[]
+p = [*map(int, input().split())]
+for i in range(n):
+    p[i] -= 1
+a, b, c = [], [], []
 for _ in range(n):
-	i,j,k = map(int,input().split())
-	a.append(i)
-	b.append(min(i,j))
-	c.append(min(i,k))
-l,r = [],[]
-for i,j,k in zip(a,b,c):
-	l.append(i-j)
-	r.append(i-k)
-q = [0]*n
-for i in range(n): q[p[i]]=i
+    i, j, k = map(int, input().split())
+    a.append(i)
+    b.append(min(i, j))
+    c.append(min(i, k))
+l, r = [], []
+for i, j, k in zip(a, b, c):
+    l.append(i - j)
+    r.append(i - k)
+q = [0] * n
+for i in range(n):
+    q[p[i]] = i
 
 base = sum(a)
 ans = 0
 sl = 0
 sr = sum(r)
-dp = SegTree([0]*n,segfunc,ide_ele)
+dp = SegTree([0] * n, segfunc, ide_ele)
 
 for i in range(n):
-	now = dp.query(0,q[i])+a[i]
-	now = max(now,sl+a[i])
-	sr -= r[i]
-	ans = max(ans,now+sr)
-	sl += l[i]
-	dp.update(q[i],now)
+    now = dp.query(0, q[i]) + a[i]
+    now = max(now, sl + a[i])
+    sr -= r[i]
+    ans = max(ans, now + sr)
+    sl += l[i]
+    dp.update(q[i], now)
 
-ans = base -ans
+ans = base - ans
 print(ans)

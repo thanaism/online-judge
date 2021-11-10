@@ -18,7 +18,7 @@ for i in range(1, 10):
 
 # pは辞書のkeyとなるため高速化を考慮して整数にする
 # 0を含まないのでleading zeroは考慮不要
-p = int(''.join(p))
+p = int("".join(p))
 
 vec = [p]  # 探索の起点を格納：初期状態
 dist = {p: 0}  # 各状態へ遷移するための最小の操作回数
@@ -34,7 +34,7 @@ while vec:
             pos = int(now[i])  # 今見ている数字iの現在位置
             if edges[pos][nine]:  # 今見ている数字iと9が連結ならば
                 now[i], now[8] = now[8], now[i]  # 位置を交換する
-                nxt = int(''.join(now))  # 交換後の状態を辞書のkeyとするため整数に変換
+                nxt = int("".join(now))  # 交換後の状態を辞書のkeyとするため整数に変換
                 if nxt not in dist:  # 訪問したことがないなら
                     dist[nxt] = dist[p] + 1  # 1回操作を加えればnowからnxtの状態にできる
                     new_vec.append(nxt)  # 次の深さの探索先リストに加える

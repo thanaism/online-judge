@@ -1,3 +1,4 @@
+#!/bin/bash
 file_path=$1
 file_name=$(basename ${file_path})
 dir_name=$(dirname ${file_path})

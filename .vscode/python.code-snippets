@@ -311,5 +311,38 @@
       "\t\treturn s",
       ""
     ]
+  },
+  "Dijkstra": {
+    "scope": "python",
+    "prefix": "class Dijkstra:",
+    "body": [
+      "from collections import defaultdict",
+      "from heapq import heappush, heappop",
+      "",
+      "",
+      "class Dijkstra:",
+      "\tdef __init__(self, size):",
+      "\t\tself.edges = defaultdict(list)",
+      "\t\tself.size = size  # number of nodes",
+      "",
+      "\tdef add(self, a, b, cost):",
+      "\t\tself.edges[a].append((b, cost))",
+      "",
+      "\tdef calc(self, start):",
+      "\t\tdist = [1 << 60] * self.size",
+      "\t\tdist[start] = 0",
+      "\t\tq = []",
+      "\t\theappush(q, (0, start))",
+      "\t\twhile q:",
+      "\t\t\tpre_cost, pre_index = heappop(q)",
+      "\t\t\tfor nxt_index, nxt_cost in self.edges[pre_index]:",
+      "\t\t\t\tcost = pre_cost + nxt_cost",
+      "\t\t\t\tif cost < dist[nxt_index]:",
+      "\t\t\t\t\theappush(q, (cost, nxt_index))",
+      "\t\t\t\t\tdist[nxt_index] = cost",
+      "\t\treturn dist",
+      "",
+      ""
+    ]
   }
 }

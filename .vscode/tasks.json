@@ -13,6 +13,15 @@
 		"problemMatcher": []
 	},
 	{
+		"label": "PyPy test",
+		"type": "shell",
+		"command": "${workspaceFolder}/pypytest_eps.sh",
+		"args": [
+			"${file}"
+		],
+		"problemMatcher": []
+	},
+	{
 		"label": "AtCoder test (eps)",
 		"type": "shell",
 		"group": "build",

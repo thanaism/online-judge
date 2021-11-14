@@ -167,7 +167,7 @@
   "for _ in range(n)": {
     "scope": "python",
     "prefix": "for _ in range(n)",
-    "body": ["for ${1:} in range(${2:})"]
+    "body": ["for _ in range(n)"]
   },
   "Warshall-Floyed algorithm": {
     "scope": "python",

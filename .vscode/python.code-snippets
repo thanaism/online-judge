@@ -160,7 +160,13 @@
       "for i in range(2, MAX_N + 1):",
       "\tfact[i] = fact[i - 1] * i % MOD",
       "\tinv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD",
-      "\tfact_inv[i] = fact_inv[i - 1] * inv[i] % MOD"
+      "\tfact_inv[i] = fact_inv[i - 1] * inv[i] % MOD",
+      "",
+      "",
+      "def nCr(n, r):",
+      "\treturn fact[n] * fact_inv[n - r] * fact_inv[r] % MOD",
+      "",
+      ""
     ],
     "description": "for binomial coefficient"
   },

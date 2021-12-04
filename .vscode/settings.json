@@ -1,9 +1,9 @@
 {
   "python.pythonPath": ".venv/bin/python",
   "editor.formatOnSave": false,
-"editor.detectIndentation": false,
-"files.associations": {
-	"*.hs": "haskell",
-	"vector": "cpp"
-},
+  "editor.detectIndentation": false,
+  "files.associations": {
+    "*.hs": "haskell",
+  },
+  "C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4}"
 }

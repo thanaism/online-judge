@@ -364,5 +364,22 @@
       "",
       ""
     ]
+  },
+  "seive of eratosthenes": {
+    "scope": "python",
+    "prefix": "eratosthenes",
+    "body": [
+      "# Sieve of Eratosthenes",
+      "# O(NloglogN) nearly O(N)",
+      "is_prime = [True] * (n + 1)",
+      "is_prime[0] = False",
+      "is_prime[1] = False",
+      "",
+      "for i in range(2, n + 1):",
+      "\tif not is_prime[i]:",
+      "\t\tcontinue",
+      "\tfor j in range(i * 2, n + 1, i):",
+      "\t\tis_prime[j] = False"
+    ]
   }
 }

@@ -28,6 +28,8 @@ if [ $extension = "py" ]; then
     else
         oj submit --guess-python-version 3 --guess-python-interpreter cpython $full_url $1 -y
     fi
+elif [ $extension = "dart" ]; then
+    oj submit -l 4018 --no-guess $full_url $1 -y
 else
     oj submit $full_url $1 -y
 fi

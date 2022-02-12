@@ -12,7 +12,7 @@
   "[*map(int,input().split())]": {
     "scope": "python",
     "prefix": "list(map(int,input().split()))",
-    "body": "[*map(int,input().split())]"
+    "body": "list(map(int,input().split()))"
   },
   "nested loop double": {
     "scope": "python",

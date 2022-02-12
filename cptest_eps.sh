@@ -10,6 +10,7 @@ base_url=${problem_name%_*}
 
 # GNU time
 export PATH="/usr/local/opt/gnu-time/libexec/gnubin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # activate venv python
 source .venv/bin/activate

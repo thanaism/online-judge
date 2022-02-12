@@ -1,1 +1,4 @@
-fn main(){proconio::input!(n:i32);println!("{}",n*2)}
+fn main() {
+    proconio::input!(n: i32);
+    println!("{}", n * 2)
+}

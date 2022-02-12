@@ -1,11 +1,11 @@
 use proconio::input;
 
 fn main() {
-    input!{
+    input! {
         _:isize,
         b:isize,
         c:isize,
         _:isize
     }
-    println!("{}",b-c);
+    println!("{}", b - c);
 }

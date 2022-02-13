@@ -24,7 +24,7 @@ if [ $extension = "cpp" ]; then
     g++ ${file_path} -std=c++14 && oj test -e 1e-7 -d ${dir_name}/.test/${problem_name//-/_}
 elif [ $extension = "rs" ]; then
     # export RUST_BACKTRACE=1
-    cd ${dir_name} && cargo build --release --bin ${problem_name} && cd - && oj test -e 1e-7 -c "${dir_name}/../../target/release/${problem_name}" -d ${dir_name}/.test/${problem_name//-/_} 
+    cd ${dir_name} && rustfmt ${file_name} && cargo build --release --bin ${problem_name} && cd - && oj test -e 1e-7 -c "${dir_name}/../../target/release/${problem_name}" -d ${dir_name}/.test/${problem_name//-/_} 
 elif [ $extension = "rb" ]; then
     oj test -e 1e-7 -c "ruby ${file_path}" -d ${dir_name}/.test/${problem_name//-/_} 
 elif [ $extension = "hs" ]; then

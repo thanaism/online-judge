@@ -39,4 +39,8 @@ elif [ $extension = "pl" ]; then
     oj test -e 1e-7 -c "perl ${file_path}" -d ${dir_name}/.test/${problem_name//-/_}
 elif [ $extension = "dart" ]; then
     oj test -e 1e-7 -c "dart ${file_path}" -d ${dir_name}/.test/${problem_name//-/_}
+elif [ $extension = "nim" ]; then
+    nim compile $file_path
+    oj test -e 1e-7 -c "$dir_name/$problem_name" -d ${dir_name}/.test/${problem_name//-/_}
+    rm $dir_name/$problem_name
 fi

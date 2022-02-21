@@ -40,6 +40,7 @@ elif [ $extension = "pl" ]; then
 elif [ $extension = "dart" ]; then
     oj test -e 1e-7 -c "dart ${file_path}" -d ${dir_name}/.test/${problem_name//-/_}
 elif [ $extension = "nim" ]; then
+    nimpretty $file_path
     # nim cpp -d:release --opt:speed --multimethods:on --warning[SmallLshouldNotBeUsed]:off --hints:off -o:{dirname}/a.out {dirname}/{basename}
     nim cpp -d:release --opt:speed --multimethods:on $file_path 
     # nim compile $file_path

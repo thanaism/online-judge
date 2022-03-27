@@ -7,4 +7,4 @@ for c in t:
         p += d
     if c == "R":
         d *= -1j
-print(p.real, p.imag)
+print(int(p.real), int(p.imag))

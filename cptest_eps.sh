@@ -46,4 +46,8 @@ elif [ $extension = "nim" ]; then
     # nim compile $file_path
     oj test -e 1e-7 -c "$dir_name/$problem_name" -d ${dir_name}/.test/${problem_name//-/_}
     rm $dir_name/$problem_name
+elif [ $extension = "sml" ]; then
+    mlton -output ./a.out $file_path &&
+    oj test -e 1e-7 -c "./a.out" -d ${dir_name}/.test/${problem_name//-/_}
+    rm ./a.out
 fi
